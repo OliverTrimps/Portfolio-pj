@@ -7,9 +7,15 @@
     {% block content %}
 <body style="background-color: lavender">
 <div class="container d-flex align-items-center flex-column" >
-  <h1 class="heading" style="text-align: center;">Skills</h1>
-    <p class="description" style="text-align: center;">Add New Skill</p>
-
+  <h1 class="heading" style="text-align: center;">Projects Done</h1>
+    <p class="description" style="text-align: center;">Add New Project</p>
+        {% with messages = get_flashed_messages() %}
+            {% if messages: %}
+                {% for message in messages: %}
+                    <h3 style="color: green"> {{ message }} </h3>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     {{ wtf.quick_form(form, novalidate=True, button_map={'submit': 'btn-lg'}) }}
   </div>
 </body>

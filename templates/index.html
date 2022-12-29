@@ -48,7 +48,7 @@
                     <div class="divider-custom-line"></div>
                 </div>
                 <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Backend Developer - Web Developer - Python</p>
+                <p class="masthead-subheading font-weight-light mb-0">Backend Developer - Web Developer - Python Programmer</p>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -72,7 +72,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
                             </div>
 <!--                            <img class="img-fluid" src="static/assets/img/portfolio/cabin.png" alt="..." />-->
-                            <img class="img-fluid" src="{{ skill.img_url }}" alt="..." />
+                            <img class="img-fluid" src="static/images/{{skill.img_url}}" alt="..." />
                         </div>
                     </div>
                     {% endfor %}
@@ -92,8 +92,8 @@
                 </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Backend Python developer with the zeal to learn and improve on the go.<br/>Coding has been one aspect of the work industry that I have always been interested in, and I have finally gotten to delv into it. The learning doesn't stop there.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">I also have knowledge on scriptwriting, logo designs, bodybuilding, and more. You can achieve whatever you set your mind on, I've gotten to understand that.<br/>I am open to work, Feel free to contact me for further enquiries.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">I am a Backend Python developer who has learnt the fundamentals of python programming and how to apply it in the real world.<br/>I have worked on several projects over time including games with GUI, web works, and python scripting.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">I also have knowledge on scriptwriting, logo designs, bodybuilding, and more.<br/>"You can achieve whatever you set your mind to"<br/>I am open to work, Feel free to contact me for further enquiries.</p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
@@ -159,9 +159,10 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="{{skill.img_url}}" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="static/images/{{skill.img_url}}" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4">{{skill.overview}}</p>
+                                    <p><a href="https://{{skill.git_url}}">click to view more</a></p>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Go Back
