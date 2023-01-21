@@ -60,7 +60,7 @@ def upload():
         file = form.image_link.data # grab the file
         name = file.filename
         split_name = f"{name.split(' ')[0]}"
-        new_name = name.replace(file.filename, f"{split_name}.jpg")
+        new_name = name.replace(file.filename, f"{split_name}")
         file.save(os.path.join(os.path.abspath(os.path.dirname(__file__)), app.config['UPLOAD_FOLDER'], secure_filename(new_name))) # Then save the file
         with app.app_context():
             new_skill = Skill(skill_name=form.skill.data, overview=form.overview.data, img_url=new_name, git_url=form.pj_url.data)
